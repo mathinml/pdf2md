@@ -1,0 +1,5 @@
+pdf2image
+transformers
+vllm
+qwen_vl_utils
+pillow
