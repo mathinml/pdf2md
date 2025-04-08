@@ -54,8 +54,8 @@ class ImageToMarkdownConverter:
             self.device = "cuda"
             print("Using NVIDIA GPU (CUDA)")
         elif torch.backends.mps.is_available():
-            self.device = "mps"
-            print("Using Apple M3 MPS")
+            self.device = "cpu"
+            print("有待 vllm 优化 Apple M3 MPS")
         else:
             self.device = "cpu"
             kwargs["gpu_memory_utilization"] = 0  # 强制使用 CPU
